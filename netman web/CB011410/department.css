@@ -1,0 +1,423 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f2f2f2;
+}
+
+header {
+
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+background-color: rgb(184, 253, 179);
+background-size: cover; /* This ensures that the background image covers the entire element */
+background-position: center center; /* This centers the background image */
+background-repeat: no-repeat; 
+
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px; /* Adjusted padding */
+  height: 70px; /* Adjusted height */
+}
+
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+
+  }
+  
+  .navbar .logo img {
+    max-width: 70%; /* Set the maximum width to 100% */
+    height: auto;
+  }
+  
+  
+
+
+.navbar input#menu-toggler {
+  display: none;
+}
+
+.navbar #hamburger-btn {
+  cursor: pointer;
+  display: none;
+}
+
+.logo {
+  margin: 0;
+  padding: 0;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.all-links {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  white-space: nowrap;
+}
+
+.all-links li {
+  margin: 0 15px;
+}
+
+.all-links li a {
+  text-decoration: none; /* Fix for text-decoration value */
+  color: rgb(0, 0, 0);
+  padding: 10px 15px;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.all-links li a:hover {
+  color: rgb(255, 124, 37);
+  border-radius: 5px;
+}  
+  
+
+/* Dropdown styling */
+.dropdown .sublinks {
+  display: none;
+  position: absolute;
+  background-color: rgb(16, 174, 69); /* Slightly lighter background */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 10; /* Ensure dropdown is on top */
+}
+
+.dropdown:hover .sublinks {
+  display: block;
+}
+
+.sublinks li {
+  margin: 0;
+}
+
+.sublinks a {
+  color: white;
+  padding: 8px 15px;
+  display: block;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.sublinks a:hover {
+  color: rgb(255, 124, 37);
+}
+
+header a, footer a {
+  margin-left: 40px;
+  text-decoration: none;
+  color: #fff;
+  height: 100%;
+  padding: 20px 0;
+  display: inline-block;
+}
+
+header a:hover, footer a:hover {
+  color: #ddd;
+}
+
+.homepage {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background: url("images/wild.webp");
+  background-position: center 65%;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.homepage::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.homepage .content {
+  display: flex;
+  height: 85%;
+  z-index: 3;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.homepage .content h1 {
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.homepage .content .text {
+  margin-bottom: 50px;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.content a:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.3);
+}
+
+section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 80px 0 0;
+}
+
+
+
+
+section .cards {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin-top: 50px;
+  padding: 0 10px;
+  justify-content: space-between;
+}
+
+
+
+section .cards .card {
+    background: #74c8b0;
+    padding: 40px 15px;
+    list-style: none;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+    margin-bottom: 40px;
+    width: calc(100% / 3 - 30px);
+    text-align: center;
+  }
+
+
+.services .card img {
+  width: 250px;
+  height: 250px;
+  margin-bottom: 20px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+
+.cards .card p {
+  padding: 0 15px;
+  margin-top: 5px;
+}
+
+
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #000;
+  padding: 20px 0;
+}
+
+footer div {
+  padding: 0 10px;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer span {
+  color: #fff;
+  margin-left: 410px;
+}
+
+footer a {
+  padding: 0;
+}
+
+@media screen and (max-width: 860px) {
+  .navbar .all-links {
+    position: fixed;
+    left: -100%;
+    width: 300px;
+    display: block;
+    height: 100vh;
+    top: 75px;
+    background: #333;
+    transition: left 0.3s ease;
+  }
+
+  .navbar #menu-toggler:checked~.all-links {
+    left: 0;
+  }
+
+  .navbar .all-links li {
+    font-size: 18px;
+  }
+
+  .navbar #hamburger-btn {
+    display: block;
+  }
+
+  section > p {
+    text-align: center;
+  }
+
+  section .cards .card {
+    width: calc(100% / 2 - 15px);
+    margin-bottom: 30px;
+  }
+
+  .homepage .content h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .homepage .content .text {
+    font-size: 17px;
+  }
+
+ 
+  footer a {
+    height: 0;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  section .cards .card {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+
+
+.map-section {
+    padding: 40px 0; 
+    text-align: center; 
+    background-color: #033c2c;
+}
+
+.map-section h2 {
+    margin-bottom: 20px; 
+    color: #ffffff; 
+}
+
+
+.map-section iframe { 
+    border: 2px solid #ddd; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 100%; 
+    height: 500px; 
+    margin: 0 auto; 
+    display: block; 
+}
+
+
+@media (max-width: 768px) {
+    .map-section iframe {
+        height: 300px; 
+    }
+}
+
+
+/* responsive */
+@media only screen and (max-width: 768px) {
+  header .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header .navbar .logo img {
+    max-width: 100%; /* Adjusted the max-width for better responsiveness */
+  }
+
+  header .navbar .all-links {
+    position: fixed;
+    left: -100%;
+    width: 100%;
+    text-align: center;
+    background: #333;
+    top: 70px;
+    transition: left 0.3s ease;
+    z-index: 10;
+  }
+
+  header .navbar #menu-toggler:checked + .all-links {
+    left: 0;
+  }
+
+  header .navbar .all-links li {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+
+  header .navbar #hamburger-btn {
+    display: block;
+  }
+
+  .homepage .content h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .homepage .content .text {
+    font-size: 17px;
+  }
+
+  section .cards .card {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  footer a {
+    height: 0;
+  }
+
+  /* Adjusted styles for the map section */
+  .map-section {
+    padding: 20px 0;
+  }
+
+  .map-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .map-section iframe {
+    height: 300px;
+  }
+}
